@@ -1,4 +1,4 @@
--- Dolphin CRM - schema.sql
+
 
 DROP TABLE IF EXISTS notes;
 DROP TABLE IF EXISTS contacts;
@@ -42,7 +42,7 @@ CREATE TABLE notes (
   CONSTRAINT fk_notes_created_by FOREIGN KEY (created_by) REFERENCES users(id)
 );
 
--- Admin user required by spec:
+-- Admin user required by doc:
 -- email: admin@project2.com
 -- password: password123 
 
