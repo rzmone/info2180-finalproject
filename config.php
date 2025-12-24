@@ -1,16 +1,12 @@
 <?php
 $host = 'localhost';
-$dbname = 'dolphin_crm';
-$username = 'root';
-$password = '';
+$db   = 'dolphin_crm';
+$user = 'root';
+$pass = '';
 
-try {
-  $pdo = new PDO(
-    "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
-    $username,
-    $password
-  );
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-  die("Database connection failed");
-}
+$pdo = new PDO(
+  "mysql:host=$host;dbname=$db;charset=utf8mb4",
+  $user,
+  $pass,
+  [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+);
